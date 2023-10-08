@@ -7,6 +7,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="https://kit.fontawesome.com/11d45a8bf7.js" crossorigin="anonymous"></script>
+    <script src="./js/loadjson.js" type="module"></script>
 </head>
 <body>
 <!-- Navbar -->
@@ -72,90 +73,54 @@
 <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased">
    <div class="justify-center px-4 mx-auto max-w-screen-xl ">
     <header class="pt-10 my-12 lg:mb-6 not-format">
-        <h1 class="text-center text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white" id="judulHeader">Perancangan Aplikasi Berbasis Web Pencatatan Servis Kendaraan</h1>
+        <h1 class="text-center text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white" id="judulHeader"></h1>
     </header>
        <article class="rounded-lg mb-5 w-full max-w-full bg-red-200 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
            <h3 class="pt-3 text-2xl font-bold text-center px-11">ABSTRAK</h3>
            <div class="space-y-2.5 px-">
-            <p class="text-justify px-6 pb-5" id="paragraf_abstrak">
-                Aplikasi  web pencatatan servis kendaraan merupakan sebuah inovasi yang bertujuan untuk mengatasi tantangan yang dihadapi pemilik kendaraan dalam melakukan servis dan perawatan kendaraannya. Aplikasi ini dirancang dengan tujuan utama memberikan solusi nyaman dan efektif bagi pemilik kendaraan untuk mencatat, memantau, dan mengelola seluruh aktivitas perawatan kendaraannya. Selama pengembangan aplikasi ini, analisis mendalam terhadap kebutuhan pengguna  dilakukan, menghasilkan desain antarmuka pengguna yang intuitif dan mudah digunakan. Aplikasi ini mencakup fitur-fitur seperti mencatat jadwal perawatan rutin, mengelola pengeluaran, dan pencatatan kebutuhan perawatan kendaraan dan servis  rutin. Arsitektur aplikasi  web ini telah dirancang dengan cermat, memastikan stabilitas, keamanan, dan daya tanggap. Penggunaan perkembangan terkini  memungkinkan akses melalui berbagai perangkat termasuk komputer, tablet, dan ponsel pintar. Keamanan data pengguna menjadi prioritas utama dengan penerapan enkripsi dan autentikasi yang kuat.
-            </p>
-            <p class="text-justify px-6 pb-5">
-                Dokumen ini memberikan rincian tentang desain antarmuka pengguna, arsitektur aplikasi, dan manajemen basis data. Selain itu, panduan pengguna yang komprehensif disediakan untuk membantu pengguna memahami setiap fitur dan fungsi aplikasi. Dokumen ini juga mencakup rencana pengujian yang mencakup pengujian fungsional, pengujian integrasi, dan pengujian keamanan untuk memastikan kualitas dan keandalan aplikasi. Bahasa yang digunakan dalam aplikasi ini yaitu JavaScript. Dengan memadukan kemudahan penggunaan, keandalan, dan keamanan data, aplikasi web Registrasi Kendaraan diharapkan dapat memberikan solusi yang efisien dan andal bagi pemilik kendaraan dalam merawat kendaraannya agar fasilitasnya tetap dalam kondisi optimal. Aplikasi ini tidak hanya menjadi alat praktis tetapi juga menjadi mitra terpercaya dalam perawatan dan pemeliharaan kendaraan sehari-hari. 
-            </p>
-            <p class="justify-center text-center px-6 pb-5">
-                Kata Kunci : Aplikasi, JavaScript, Kendaraan.
-            </p>
+            <div id="paragraf_abstrak1"></div>
+            <div id="paragraf_abstrak2"></div>
+            <div id="kata_kunci"></div>
            </div>
            </article>
         <article class="rounded-lg mb-5 w-full max-w-full bg-red-200 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
            <h3 class="pt-3 text-2xl font-bold text-center px-11">ABSTRACT</h3>
            <div class="space-y-2.5 px-">
-            <p class="text-justify px-6 pb-5">
-                The vehicle service recording web application is an innovation that aims to overcome the challenges faced by vehicle owners in servicing and maintaining their vehicles. The application is designed with the main objective of providing a convenient and effective solution for vehicle owners to record, monitor and manage all their vehicle maintenance activities. During the development of this app, an in-depth analysis of user needs was conducted, resulting in an intuitive and easy-to-use user interface design. The app includes features such as recording routine maintenance schedules, managing expenses, and logging vehicle maintenance and routine service needs. The architecture of this web application has been carefully designed, ensuring stability, security and responsiveness. The use of the latest developments allows access through various devices including computers, tablets and smart phones. Security of user data is a top priority with the implementation of strong encryption and authentication.
-            </p>
-            <p class="text-justify px-6 pb-5">
-                This document provides details on user interface design, application architecture, and database management. In addition, a comprehensive user guide is provided to help users understand each feature and function of the application. This document also includes a test plan that includes functional testing, integration testing, and security testing to ensure the quality and reliability of the application. The language used in this application is JavaScript. By combining ease of use, reliability, and data security, the Vehicle Registration web application is expected to provide an efficient and reliable solution for vehicle owners in maintaining their vehicles so that their facilities remain in optimal condition. This application is not only a practical tool but also a trusted partner in the daily care and maintenance of vehicles. 
-            </p>
-            <p class="justify-center text-center px-6 pb-5">
-                Keywords: Application, JavaScript, Vehicle.
-            </p>
+            <div id="paragraf_abstrak_english1"></div>
+            <div id="paragraf_abstrak_english2"></div>
+            <div id="keywords"></div>
            </div>
            </article>
            <article class="rounded-lg mb-5 w-full max-w-full bg-red-200 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
            <h3 class="pt-3 text-center text-2xl pl-11 font-bold">Deskripsi</h3>
            <div class="space-y-2.5">
-            <p class="text-justify px-6 pb-5" id="paragraf_description">
-                Aplikasi pencatatan servis kendaraan ini merupakan merupakan terobosan inovatif dalam industri otomotif, membawa pengalaman perawatan kendaraan ke tingkat yang baru. Dengan integrasi teknologi terkini dan antarmuka pengguna yang ramah pengguna, aplikasi ini memungkinkan pengguna dengan mudah mencatat dan mengelola seluruh aktivitas servis dan pemeliharaan kendaraan melalui perangkat seluler.
-            </p>
-            <p class="text-justify px-6 pb-5">
-                Tujuan dari pembuatan aplikasi ini berguna untuk memudahkan para pelanggan untuk mengetahui catatan seluruh aktivitas servis kendaraan yang pernah dilakukan. Pencatatan servis kendaraan ini berbentuk aplikasi untuk memudahkan akses dan mendapatkan informasi seputar servis yang pernah dilakukan sebelumnya.
-               </p>
-            <p class="text-justify px-6 pb-5">
-                Fitur-fitur yang akan ada dalam aplikasi ini yaitu pencatatan servis secara real-time dan riwayat perawatan lengkap. Pencatatan servis secara real-time digunakan untuk pengguna mencatat semua jenis perawatan kendaraan, termasuk perawatan rutin, perbaikan, dan penggantian suku cadang. Informasi ini disimpan secara real time, memberikan update langsung mengenai kondisi kendaraan. Dan riwayat perawatan lengkap yaitu aplikasi menyediakan riwayat servis kendaraan secara lengkap, termasuk tanggal dan jenis servis yang  dilakukan. Pengguna dapat melihat riwayat ini kapan saja, sehingga memudahkan pelacakan biaya dan mengidentifikasi kebutuhan perawatan kendaraan.
-               </p>
+            <div id="paragraf_description1"></div>
+            <div id="paragraf_description2"></div>
+            <div id="paragraf_description3"></div>
            </div>
            </article>
            <article class="rounded-lg mb-5 w-full max-w-full bg-red-200 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
            <h3 class="pt-3 text-center text-2xl pl-11 font-bold">Latar Belakang</h3>
            <div class="space-y-2.5">
-            <p class="text-justify px-6 pb-5" id="paragraf_latar">
-                Di era modern yang didominasi mobilitas dan konektivitas, pemilik kendaraan seringkali menghadapi tantangan dalam melakukan servis dan perawatan kendaraannya. Kurangnya pengetahuan mengenai jadwal perawatan yang tepat, sulitnya mencari suku cadang pengganti yang sesuai, dan sulitnya memantau kondisi pengoperasian kendaraan secara rutin merupakan beberapa permasalahan yang sering dihadapi pemilik kendaraan. Selain itu, sulitnya mencari bengkel atau service center terpercaya juga menjadi permasalahan umum.
-               </p>
-            <p class="text-justify px-6 pb-5">
-                Permasalahan ini tidak hanya menimbulkan ketidaknyamanan bagi pemilik kendaraan, namun juga dapat menimbulkan kerugian finansial yang cukup besar. Perbaikan yang mahal karena kelalaian perawatan, atau keterlambatan dalam melakukan perbaikan yang diperlukan dapat menyebabkan kerusakan lebih lanjut pada kendaraan.  Oleh karena itu, dihadirkan perancangan aplikasi servis berbasis website sebagai solusi untuk mengatasi permasalahan tersebut. Dengan menyediakan platform yang informatif dan mudah digunakan, aplikasi ini bertujuan untuk membekali pemilik kendaraan dengan pengetahuan yang diperlukan tentang perawatan yang benar, membantu mereka dengan mudah menemukan suku cadang, melacak biaya perawatan, dan menemukan bengkel yang andal dengan cepat dan efektif. Oleh karena itu, aplikasi ini tidak hanya membantu pemilik kendaraan  merawat kendaraannya dengan lebih efektif, tetapi juga membantu mereka menghemat waktu, uang, dan mengurangi stres  terkait perawatan kendaraan.
-               </p>
+            <p class="text-justify px-6 pb-5" id="paragraf_latar1"></p>
+            <p class="text-justify px-6 pb-5" id="paragraf_latar2"></p>
            </div>
            </article>
            <article class="rounded-lg mb-5 w-full max-w-full bg-red-200 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert" style="height: 250px;">
            <h3 class="pt-3 text-center text-2xl pl-11 font-bold">Tujuan</h3>
            <div class="space-y-2.5">
-            <p class="text-justify px-6" id="paragraf_tujuan">
-                Dari latar belakang diatas dapat diuraikan tujuan dari aplikasi kami sebagai berikut :
-            </p>
-            <p class="text-justify px-6">
-                1.	Untuk mempermudah pencatatan dan pemantauan servis kendaraan.
-            </p>
-            <p class="text-justify px-6">
-                2.	Membantu lebih memahami tentang kebutuhan perawatan kendaraan. 
-            </p>
-            <p class="text-justify px-6">
-                3.	Untuk mengoptimalkan biaya pengeluaran perawatan kendaraan.
-            </p>
+            <div id="paragraf_tujuan"></div>
+            <div id="tujuan_point1"></div>
+            <div id="tujuan_point2"></div>
+            <div id="tujuan_point3"></div>
            </div>
            </article>
            <article class="rounded-lg mb-5 w-full max-w-full bg-red-200 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert" style="height: 250px;">
            <h3 class="pt-3 text-center justify-center text-2xl pl-11 font-bold">Lingkup Dokumentasi</h3>
            <div class="space-y-2.5">
-            <p class="text-justify px-6" id="paragaraf_doc">
-                Adapun batasan-batasan dari penilitian kami yaitu sebagai berikut :
-            </p>
-            <p class="text-justify px-6">
-                1.	Bahasa pemrograman yang digunakan yaitu JavaScript ES6+.
-            </p>
-            <p class="text-justify px-6">
-                2.	Fitur yang ditampilkan yaitu pencatatan servis kendaraan, manajemen pengeluaran, dan pemantauan kinerja kendaraan.
-            </p>
+            <div id="paragraf_doc"></div>
+            <div id="doc_point1"></div>
+            <div id="doc_point2"></div>
            </div>
            </article>   
    </div>
@@ -181,5 +146,4 @@
  </footer>
  <!-- End of Footer -->
 </body>
-<script src="./js/loadjson.js"></script>
 </html>

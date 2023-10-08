@@ -1,22 +1,42 @@
-
 import { setInner } from "https://jscroot.github.io/element/croot.js";
-import { get } from "https://jscroot.github.io/api/croot.js";
+import jsonData from "../data/json/proposal.json" assert { type: "json" };
+
+// page_1.html
+setInner("judulHeader", jsonData.titleProposal);
+ 
+// Abstrak
+setInner("paragraf_abstrak1", `<p class="text-justify px-6 pb-5">${jsonData.paragraf_abstrak1}</p>`);
+setInner("paragraf_abstrak2", `<p class="text-justify px-6 pb-5">${jsonData.paragraf_abstrak2}</p>`);
+setInner("kata_kunci", `<p class="justify-center text-center px-6 pb-5">${jsonData.kata_kunci}</p>`);
+
+// Abstrak Inggris
+
+setInner("paragraf_abstrak_english1", `<p class="text-justify px-6 pb-5">${jsonData.paragraf_abstrak_english1}</p>`);
+setInner("paragraf_abstrak_english2", `<p class="text-justify px-6 pb-5">${jsonData.paragraf_abstrak_english2}</p>`);
+setInner("keywords", `<p class="justify-center text-center px-6 pb-5">${jsonData.keywords}</p>`);
 
 
-const responsFungsi = (data) => {
-    setInner("judulHeader", data.titleProposal);
+// Description
 
-    setInner("headerAbstrak", `${data.datafor.sectionAbstrak}`)
-    setInner("paragraf_abstrak", `${data.datafor.paragraf_abstrak[HTMLParagraphElement](index)}`);
+setInner("paragraf_description1", `<p class="text-justify px-6 pb-5">${jsonData.paragraf_description1}</p>`);
+setInner("paragraf_description2", `<p class="text-justify px-6 pb-5">${jsonData.paragraf_description2}</p>`);
+setInner("paragraf_description3", `<p class="text-justify px-6 pb-5">${jsonData.paragraf_description3}</p>`);
 
-    setInner("headerDeskripsi", `${data.sectionAbstrak}`)
-    setInner("paragraf_description", `${data.paragraf_description[HTMLParagraphElement](index)}`);
 
-    setInner("headerLatar", `${data.sectionLatar}`)
-    setInner("paragraf_latar", `${data.paragraf_latar[HTMLParagraphElement](index)}`);
+// latar
 
-    setInner("headerTujuan", `${data.sectionTujuan}`)
-    setInner("paragraf_tujuan", `${data.paragraf_latar[HTMLParagraphElement](index)}`);
-};
+setInner("paragraf_latar1", `<p class="text-justify px-6 pb-5">${jsonData.paragraf_latar1}</p>`);
+setInner("paragraf_latar2", `<p class="text-justify px-6 pb-5">${jsonData.paragraf_latar2}</p>`);
 
-await get("../data/json/proposal.json", getRespons);
+// tujuan
+
+setInner("paragraf_tujuan", `<p class="text-justify px-6 pb-5">${jsonData.paragraf_tujuan}</p>`);
+setInner("tujuan_point1", `<p class="text-justify px-6 pb-5">1. ${jsonData.tujuan_point1}</p>`);
+setInner("tujuan_point2", `<p class="text-justify px-6 pb-5">2. ${jsonData.tujuan_point2}</p>`);
+setInner("tujuan_point3", `<p class="text-justify px-6 pb-5">3. ${jsonData.tujuan_point3}</p>`);
+
+// lingkup
+
+setInner("paragraf_doc", `<p class="text-justify px-6 pb-5">${jsonData.paragraf_doc}</p>`);
+setInner("doc_point1", `<p class="text-justify px-6 pb-5">1. ${jsonData.doc_point1}</p>`);
+setInner("doc_point2", `<p class="text-justify px-6 pb-5">2. ${jsonData.doc_point2}</p>`);
