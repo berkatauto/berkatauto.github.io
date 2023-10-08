@@ -7,33 +7,33 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="https://kit.fontawesome.com/11d45a8bf7.js" crossorigin="anonymous"></script>
+    <script src="./js/loadjson.js" type="module"></script>
 </head>
 <body>
-   <!-- Navbar -->
-   
+<!-- Navbar -->
 <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
-   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <button class=" right-auto bg-red-300 hover:bg-red-50 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
-         <= Menu
-      </button>
-   <a href="./index.html" class="flex items-center">
-   <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Proyek 3</span>
-   </a>
-   <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-      <li>
-        <a href="./page_1.html" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
-      </li>
-      <li>
-        <a href="./anggota.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Anggota</a>
-      </li>
-      <li>
-        <a href="./doc_page.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Document</a>
-      </li>
-    </ul>
-   </div>
- </nav>
- 
- <!-- End of Navbar -->
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+       <button class=" right-auto bg-red-300 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+          <= Menu
+       </button>
+    <a href="/index.html" class="flex items-center">
+    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Proyek 3</span>
+    </a>
+    <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+       <li>
+         <a href="/page_1.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Home</a>
+       </li>
+       <li>
+         <a href="./anggota.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Anggota</a>
+       </li>
+       <li>
+         <a href="./doc_page.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Document</a>
+       </li>
+     </ul>
+    </div>
+  </nav>
+  
+<!-- End of Navbar -->
 
 <!-- Sidebar -->
 
@@ -48,19 +48,13 @@
   <div class="py-4 overflow-y-auto">
       <ul class="space-y-2 font-medium">
          <li>
-            <a href="/page_1.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+            <a href="/page_1.html" class="flex items-center p-2 text-gray-900 bg-red-800 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                <span class="ml-3">Latar Belakang dan Tujuan</span>
             </a>
          </li>
          <li>
             <a href="./page_2.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                <span class="flex-1 ml-3 whitespace-nowrap">Kajian Pustaka</span>
-            </a>
-         </li>
-         <li>
-            <a href="./page_3.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-
-               <span class="flex-1 ml-3 whitespace-nowrap">Daftar Pustaka</span>
             </a>
          </li>
          <li>
@@ -77,6 +71,24 @@
  <!-- Main Page -->
 <div id="LatarBelakang">
 <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased">
+   <div class="justify-center px-4 mx-auto max-w-screen-xl ">
+    <header class="pt-10 my-12 lg:mb-6 not-format">
+        <h1 class="text-center text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white" id="judulHeader"></h1>
+    </header>
+       <article class="rounded-lg mb-5 w-full max-w-full bg-red-200 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+           <h3 class="pt-3 text-2xl font-bold text-center px-11">ABSTRAK</h3>
+           <div class="space-y-2.5 px-">
+            <div id="paragraf_abstrak1"></div>
+            <div id="paragraf_abstrak2"></div>
+            <div id="kata_kunci"></div>
+           </div>
+           </article>
+        <article class="rounded-lg mb-5 w-full max-w-full bg-red-200 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+           <h3 class="pt-3 text-2xl font-bold text-center px-11">ABSTRACT</h3>
+           <div class="space-y-2.5 px-">
+            <div id="paragraf_abstrak_english1"></div>
+            <div id="paragraf_abstrak_english2"></div>
+            <div id="keywords"></div>
    <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
        <article class="mx-auto w-full max-w-full bg-red-200 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
            <header class=" my-12 lg:mb-6 not-format">
@@ -106,8 +118,13 @@
                 Keywords: Application, JavaScript, Vehicle.
             </p>
            </div>
-           <h3 class="text-2xl pl-11 font-bold">Deskripsi</h3>
+           </article>
+           <article class="rounded-lg mb-5 w-full max-w-full bg-red-200 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+           <h3 class="pt-3 text-center text-2xl pl-11 font-bold">Deskripsi</h3>
            <div class="space-y-2.5">
+            <div id="paragraf_description1"></div>
+            <div id="paragraf_description2"></div>
+            <div id="paragraf_description3"></div>
             <p>
                 Aplikasi pencatatan servis kendaraan ini merupakan merupakan terobosan inovatif dalam industri otomotif, membawa pengalaman perawatan kendaraan ke tingkat yang baru. Dengan integrasi teknologi terkini dan antarmuka pengguna yang ramah pengguna, aplikasi ini memungkinkan pengguna dengan mudah mencatat dan mengelola seluruh aktivitas servis dan pemeliharaan kendaraan melalui perangkat seluler.
             </p>
@@ -118,42 +135,31 @@
                 Fitur-fitur yang akan ada dalam aplikasi ini yaitu pencatatan servis secara real-time dan riwayat perawatan lengkap. Pencatatan servis secara real-time digunakan untuk pengguna mencatat semua jenis perawatan kendaraan, termasuk perawatan rutin, perbaikan, dan penggantian suku cadang. Informasi ini disimpan secara real time, memberikan update langsung mengenai kondisi kendaraan. Dan riwayat perawatan lengkap yaitu aplikasi menyediakan riwayat servis kendaraan secara lengkap, termasuk tanggal dan jenis servis yang  dilakukan. Pengguna dapat melihat riwayat ini kapan saja, sehingga memudahkan pelacakan biaya dan mengidentifikasi kebutuhan perawatan kendaraan.
                </p>
            </div>
-           <h3 class="text-2xl pl-11 font-bold">Latar Belakang</h3>
+           </article>
+           <article class="rounded-lg mb-5 w-full max-w-full bg-red-200 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+           <h3 class="pt-3 text-center text-2xl pl-11 font-bold">Latar Belakang</h3>
            <div class="space-y-2.5">
-            <p>
-                Di era modern yang didominasi mobilitas dan konektivitas, pemilik kendaraan seringkali menghadapi tantangan dalam melakukan servis dan perawatan kendaraannya. Kurangnya pengetahuan mengenai jadwal perawatan yang tepat, sulitnya mencari suku cadang pengganti yang sesuai, dan sulitnya memantau kondisi pengoperasian kendaraan secara rutin merupakan beberapa permasalahan yang sering dihadapi pemilik kendaraan. Selain itu, sulitnya mencari bengkel atau service center terpercaya juga menjadi permasalahan umum.
-               </p>
-            <p>
-                Permasalahan ini tidak hanya menimbulkan ketidaknyamanan bagi pemilik kendaraan, namun juga dapat menimbulkan kerugian finansial yang cukup besar. Perbaikan yang mahal karena kelalaian perawatan, atau keterlambatan dalam melakukan perbaikan yang diperlukan dapat menyebabkan kerusakan lebih lanjut pada kendaraan.  Oleh karena itu, dihadirkan perancangan aplikasi servis berbasis website sebagai solusi untuk mengatasi permasalahan tersebut. Dengan menyediakan platform yang informatif dan mudah digunakan, aplikasi ini bertujuan untuk membekali pemilik kendaraan dengan pengetahuan yang diperlukan tentang perawatan yang benar, membantu mereka dengan mudah menemukan suku cadang, melacak biaya perawatan, dan menemukan bengkel yang andal dengan cepat dan efektif. Oleh karena itu, aplikasi ini tidak hanya membantu pemilik kendaraan  merawat kendaraannya dengan lebih efektif, tetapi juga membantu mereka menghemat waktu, uang, dan mengurangi stres  terkait perawatan kendaraan.
-               </p>
+            <p class="text-justify px-6 pb-5" id="paragraf_latar1"></p>
+            <p class="text-justify px-6 pb-5" id="paragraf_latar2"></p>
            </div>
-           <h3 class="text-2xl pl-11 font-bold">Tujuan</h3>
+           </article>
+           <article class="rounded-lg mb-5 w-full max-w-full bg-red-200 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert" style="height: 250px;">
+           <h3 class="pt-3 text-center text-2xl pl-11 font-bold">Tujuan</h3>
            <div class="space-y-2.5">
-            <p>
-                Dari latar belakang diatas dapat diuraikan tujuan dari aplikasi kami sebagai berikut :
-            </p>
-            <p>
-                1.	Untuk mempermudah pencatatan dan pemantauan servis kendaraan.
-            </p>
-            <p>
-                2.	Membantu lebih memahami tentang kebutuhan perawatan kendaraan. 
-            </p>
-               <p>
-                3.	Untuk mengoptimalkan biaya pengeluaran perawatan kendaraan.
-            </p>
+            <div id="paragraf_tujuan"></div>
+            <div id="tujuan_point1"></div>
+            <div id="tujuan_point2"></div>
+            <div id="tujuan_point3"></div>
            </div>
-           <h3 class="text-2xl pl-11 font-bold">Lingkup Dokumentasi</h3>
+           </article>
+           <article class="rounded-lg mb-5 w-full max-w-full bg-red-200 format format-sm sm:format-base lg:format-lg format-blue dark:format-invert" style="height: 250px;">
+           <h3 class="pt-3 text-center justify-center text-2xl pl-11 font-bold">Lingkup Dokumentasi</h3>
            <div class="space-y-2.5">
-            <p>
-                Adapun batasan-batasan dari penilitian kami yaitu sebagai berikut :
-            </p>
-            <p>
-                1.	Bahasa pemrograman yang digunakan yaitu JavaScript ES6+.
-            </p>
-            <p>
-                2.	Fitur yang ditampilkan yaitu pencatatan servis kendaraan, manajemen pengeluaran, dan pemantauan kinerja kendaraan.
-            </p>
+            <div id="paragraf_doc"></div>
+            <div id="doc_point1"></div>
+            <div id="doc_point2"></div>
            </div>
+           </article>
            <h3 class="text-2xl pl-11 font-bold">Kajian Pustaka</h3>
            <h5 class="text-2xl pl-11 font-bold">1. Pengertian Website</h5>
            <div class="space-y-2.5">
@@ -419,7 +425,7 @@
                 [11]	D. K. , Y. H. Berry Junanda, “PENCARIAN RUTE TERPENDEK MENGGUNAKAN ALGORITMA DIJKSTRA PADA SISTEM  INFORMASI GEOGRAFIS PEMETAAN STASIUN PENGISIAN BAHAN BAKAR UMUM,” Teknik Elektronika & Informatika, vol. 4, no. 1, 2018, Accessed: Oct. 07, 2023. [Online]. Available: https://ejournal.unp.ac.id/index.php/voteknika/article/view/6014/4686
             </p>
            </div>
-        </article>   
+        </article>
    </div>
  </main>
  </div>
@@ -443,5 +449,4 @@
  </footer>
  <!-- End of Footer -->
 </body>
-<script src="./js/getjson.js"></script>
 </html>
