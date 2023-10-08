@@ -1,44 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const dataLoad = document.getElementById("LatarBelakang").getElementsByTagName('tbody')[0];
-    fetch("../data/")
+document.addEventListener('DOMContentLoaded', function () {
+    // URL of the JSON data
+    const proposalData = '../data/json/proposal.json';
+
+    // Select the HTML element where you want to display the JSON data
+    const jsonContainer = document.getElementById('proposal-container');
+
+    // Use the fetch API to load the JSON data
+    fetch(proposalData)
         .then(response => response.json())
         .then(data => {
-            data.features.forEach(feature => {
-
-            });
+            // Process the JSON data and display it in the HTML
+            jsonContainer.innerHTML = JSON.stringify(data, null, 2);
         })
-        .catch(error => console.error("Error: ", error));
-});
-document.addEventListener("DOMContentLoaded", () => {
-    const dataLoad = document.getElementById("Tujuan").getElementsByTagName('tbody')[0];
-    fetch("../data/")
-        .then(response => response.json())
-        .then(data => {
-            data.features.forEach(feature => {
-
-            });
-        })
-        .catch(error => console.error("Error: ", error));
-});
-document.addEventListener("DOMContentLoaded", () => {
-    const dataLoad = document.getElementById("LingkupDoc").getElementsByTagName('tbody')[0];
-    fetch("../data/")
-        .then(response => response.json())
-        .then(data => {
-            data.features.forEach(feature => {
-
-            });
-        })
-        .catch(error => console.error("Error: ", error));
-});
-document.addEventListener("DOMContentLoaded", () => {
-    const dataLoad = document.getElementById("KPustaka").getElementsByTagName('tbody')[0];
-    fetch("../data/")
-        .then(response => response.json())
-        .then(data => {
-            data.features.forEach(feature => {
-
-            });
-        })
-        .catch(error => console.error("Error: ", error));
+        .catch(error => {
+            console.error('Error loading JSON:', error);
+        });
 });
