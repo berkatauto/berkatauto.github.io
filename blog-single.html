@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Berkat Auto - Pendidikan Otomotif</title>
-    <link href="style.css" rel="stylesheet"></head>
+    <title>Blog Details | Base - Tailwind CSS Startup Template</title>
+  <link rel="icon" href="favicon.ico"><link href="style.css" rel="stylesheet"></head>
   <body
-    x-data="{ page: 'home', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-data="{ page: 'blog-single', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
     x-init="
          darkMode = JSON.parse(localStorage.getItem('darkMode'));
          $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
@@ -22,7 +22,8 @@
   <div class="bb ze ki xn 2xl:ud-px-0 oo wf yf i">
     <div class="vd to/4 tc wf yf">
       <a href="index.html">
-        <h2>BERKAT AUTO</h2>
+        <img class="om" src="images/logo-light.svg" alt="Logo Light" />
+        <img class="xc nm" src="images/logo-dark.svg" alt="Logo Dark" />
       </a>
 
       <!-- Hamburger Toggle BTN -->
@@ -81,17 +82,17 @@
       </nav>
 
       <div class="tc wf ig pb no">
-        <!-- <div class="pc h io pa ra" :class="navigationOpen ? '!-ud-visible' : 'd'">
+        <div class="pc h io pa ra" :class="navigationOpen ? '!-ud-visible' : 'd'">
           <label class="rc ab i">
-            <input type="checkbox" :value="darkMode" @change="darkMode = !darkMode" class="pf vd yc uk h r za ab" /> -->
+            <input type="checkbox" :value="darkMode" @change="darkMode = !darkMode" class="pf vd yc uk h r za ab" />
             <!-- Icon Sun -->
-            <!-- <svg :class="{ 'wn' : page === 'home', 'xh' : page === 'home' && stickyMenu }" class="th om" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg :class="{ 'wn' : page === 'home', 'xh' : page === 'home' && stickyMenu }" class="th om" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12.0908 18.6363C10.3549 18.6363 8.69 17.9467 7.46249 16.7192C6.23497 15.4916 5.54537 13.8268 5.54537 12.0908C5.54537 10.3549 6.23497 8.69 7.46249 7.46249C8.69 6.23497 10.3549 5.54537 12.0908 5.54537C13.8268 5.54537 15.4916 6.23497 16.7192 7.46249C17.9467 8.69 18.6363 10.3549 18.6363 12.0908C18.6363 13.8268 17.9467 15.4916 16.7192 16.7192C15.4916 17.9467 13.8268 18.6363 12.0908 18.6363ZM12.0908 16.4545C13.2481 16.4545 14.358 15.9947 15.1764 15.1764C15.9947 14.358 16.4545 13.2481 16.4545 12.0908C16.4545 10.9335 15.9947 9.8236 15.1764 9.00526C14.358 8.18692 13.2481 7.72718 12.0908 7.72718C10.9335 7.72718 9.8236 8.18692 9.00526 9.00526C8.18692 9.8236 7.72718 10.9335 7.72718 12.0908C7.72718 13.2481 8.18692 14.358 9.00526 15.1764C9.8236 15.9947 10.9335 16.4545 12.0908 16.4545ZM10.9999 0.0908203H13.1817V3.36355H10.9999V0.0908203ZM10.9999 20.8181H13.1817V24.0908H10.9999V20.8181ZM2.83446 4.377L4.377 2.83446L6.69082 5.14828L5.14828 6.69082L2.83446 4.37809V4.377ZM17.4908 19.0334L19.0334 17.4908L21.3472 19.8046L19.8046 21.3472L17.4908 19.0334ZM19.8046 2.83337L21.3472 4.377L19.0334 6.69082L17.4908 5.14828L19.8046 2.83446V2.83337ZM5.14828 17.4908L6.69082 19.0334L4.377 21.3472L2.83446 19.8046L5.14828 17.4908ZM24.0908 10.9999V13.1817H20.8181V10.9999H24.0908ZM3.36355 10.9999V13.1817H0.0908203V10.9999H3.36355Z" fill=""/>
-            </svg> -->
+            </svg>
             <!-- Icon Sun -->
-            <!-- <img class="xc nm" src="images/icon-moon.svg" alt="Moon" />
+            <img class="xc nm" src="images/icon-moon.svg" alt="Moon" />
           </label>
-        </div> -->
+        </div>
 
         <a href="signin.html" :class="{ 'nk yl' : page === 'home', 'ok' : page === 'home' && stickyMenu }" class="ek pk xl">Sign In</a>
         <a href="signup.html" :class="{ 'hh/[0.15]' : page === 'home', 'sh' : page === 'home' && stickyMenu }" class="lk gh dk rg tc wf xf _l gi hi">Sign Up</a>
@@ -103,376 +104,187 @@
     <!-- ===== Header End ===== -->
 
     <main>
-      <!-- ===== Hero Start ===== -->
-      <section class="gj do ir hj sp jr i pg">
-        <!-- Hero Images -->
-        <div class="xc fn zd/2 2xl:ud-w-187.5 bd 2xl:ud-h-171.5 h q r">
-          <img src="images/shape-01.svg" alt="shape" class="xc 2xl:ud-block h t -ud-left-[10%] ua" />
-          <img src="images/shape-02.svg" alt="shape" class="xc 2xl:ud-block h u p va" />
-          <img src="images/shape-03.svg" alt="shape" class="xc 2xl:ud-block h v w va" />
-          <img src="images/shape-04.svg" alt="shape" class="h q r" />
-          <img src="images/hero.png" alt="Woman" class="h q r ua" />
-        </div>
-
-        <!-- Hero Content -->
+      <!-- ===== Blog Single Start ===== -->
+      <section class="gj qp gr hj rp hr">
         <div class="bb ze ki xn 2xl:ud-px-0">
-          <div class="tc _o">
-            <div class="animate_left jn/2">
-              <h1 class="fk vj zp or kk wm wb">Cari Tahu tentang otomotif sangat mudah dan dimana saja.</h1>
-              <p class="fq">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla magna mauris. Nulla fermentum viverra sem eu rhoncus consequat varius nisi quis, posuere magna.
-              </p>
+          <div class="tc sf yo zf kq">
+            <div class="ro">
+              <div class="animate_top rounded-md shadow-solid-13 bg-white dark:bg-blacksection border border-stroke dark:border-strokedark p-7.5 md:p-10">
+                <img src="images/blog-big.png" alt="Blog" />
 
-              <div class="tc tf yo zf mb">
-                <a href="#" class="ek jk lk gh gi hi rg ml il vc _d _l"
-                  >Get Started Now</a
-                >
+                <h2 class="ek vj 2xl:ud-text-title-lg kk wm nb gb">Kobe Steel plant that supplied</h2>
 
-                <span class="tc sf">
-                  <a href="#" class="inline-block ek xj kk wm"> Call us (0123) 456 – 789 </a>
-                  <span class="inline-block">For any question or concern</span>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ===== Hero End ===== -->
+                <ul class="tc uf cg 2xl:ud-gap-15 fb">
+                  <li><span class="rc kk wm">Author: </span> Devid Cleriya</li>
+                  <li><span class="rc kk wm">Published On: </span> April 16, 2025</li>
+                  <li><span class="rc kk wm">Category: </span> Events</li>
+                </ul>
 
-      <!-- ===== Small Features Start ===== -->
-      <section id="features">
-        <div class="bb ze ki yn 2xl:ud-px-12.5">
-          <div class="tc uf zo xf ap zf bp mq">
-            <!-- Small Features Item -->
-            <div class="animate_top kn to/3 tc cg oq">
-              <div class="tc wf xf cf ae cd rg mh">
-                <img src="images/icon-01.svg" alt="Icon" />
-              </div>
-              <div>
-                <h4 class="ek yj go kk wm xb">Tips Otomotif</h4>
-                <p>Dapatkan Tips untuk kendaraan anda secara mudah dan interaktif.</p>
-              </div>
-            </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis nibh lorem. Duis sed odio lorem. In a efficitur leo. Ut venenatis rhoncus quam sed condimentum. Curabitur vel turpis in dolor volutpat imperdiet in ut mi. Integer non volutpat nulla. Nunc elementum elit viverra, tempus quam non, interdum ipsum. 
+                </p>
 
-            <!-- Small Features Item -->
-            <div class="animate_top kn to/3 tc cg oq">
-              <div class="tc wf xf cf ae cd rg nh">
-                <img src="images/icon-02.svg" alt="Icon" />
-              </div>
-              <div>
-                <h4 class="ek yj go kk wm xb">Berita Otomotif</h4>
-                <p>Cari tahu dunia otomotif, baik lokal maupun mancanegara.</p>
-              </div>
-            </div>
+                <p class="ob">
+                  Aenean augue ex, condimentum vel metus vitae, aliquam porta elit. Quisque non metus ac orci mollis posuere. Mauris vel ipsum a diam interdum ultricies sed vitae neque. Nulla
+                  porttitor quam vitae pulvinar placerat. Nulla fringilla elit sit amet justo feugiat sodales. Morbi eleifend, enim non eleifend laoreet, odio libero lobortis lectus, non porttitor sem
+                  urna sit amet metus. In sollicitudin quam est, pellentesque consectetur felis fermentum vitae.
+                </p>
 
-            <!-- Small Features Item -->
-            <div class="animate_top kn to/3 tc cg oq">
-              <div class="tc wf xf cf ae cd rg oh">
-                <img src="images/icon-03.svg" alt="Icon" />
-              </div>
-              <div>
-                <h4 class="ek yj go kk wm xb">Belajar Otomotif</h4>
-                <p>Ingin belajar lebih dalam tentang otomotif? Kami disini dapat membantumu!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ===== Small Features End ===== -->
-
-      <!-- ===== About Start ===== -->
-      <section class="ji gp uq 2xl:ud-py-35 pg">
-        <div class="bb ze ki xn wq">
-          <div class="tc wf gg qq">
-            <!-- About Images -->
-            <div class="animate_left xc gn gg jn/2 i">
-              <div>
-                <img src="images/shape-05.svg" alt="Shape" class="h -ud-left-5 x" />
-                <img src="images/about-01.png" alt="About" class="ib" />
-                <img src="images/about-02.png" alt="About" />
-              </div>
-              <div>
-                <img src="images/shape-06.svg" alt="Shape" />
-                <img src="images/about-03.png" alt="About" class="ob gb" />
-                <img src="images/shape-07.svg" alt="Shape" class="bb" />
-              </div>
-            </div>
-
-            <!-- About Content -->
-            <div class="animate_right jn/2">
-              <h4 class="ek yj mk gb">Why Choose Us</h4>
-              <h2 class="fk vj zp pr kk wm qb">Tips Otomotif</h2>
-              <p class="uo">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
-
-              <a href="https://www.youtube.com/watch?v=xcJtL7QggTI" data-fslightbox class="vc wf hg mb">
-                <span class="tc wf xf be dd rg i gh ua">
-                  <span class="nf h vc yc vd rg gh qk -ud-z-1"></span>
-                  <img src="images/icon-play.svg" alt="Play" />
-                </span>
-                <span class="kk">CARI TAHU LEBIH LANJUT</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ===== About End ===== -->
-
-      <!-- ===== About Start ===== -->
-      <section class="ji gp uq 2xl:ud-py-35 pg">
-        <div class="bb ze ki xn wq">
-          <div class="tc wf gg qq">
-            <!-- About Images -->
-            <div class="animate_left xc gn gg jn/2 i">
-              <div>
-                <img src="images/shape-05.svg" alt="Shape" class="h -ud-left-5 x" />
-                <img src="images/about-01.png" alt="About" class="ib" />
-                <img src="images/about-02.png" alt="About" />
-              </div>
-              <div>
-                <img src="images/shape-06.svg" alt="Shape" />
-                <img src="images/about-03.png" alt="About" class="ob gb" />
-                <img src="images/shape-07.svg" alt="Shape" class="bb" />
-              </div>
-            </div>
-
-            <!-- About Content -->
-            <div class="animate_right jn/2">
-              <h4 class="ek yj mk gb">Why Choose Us</h4>
-              <h2 class="fk vj zp pr kk wm qb">Berita Otomotif</h2>
-              <p class="uo">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
-
-              <a href="https://www.youtube.com/watch?v=xcJtL7QggTI" data-fslightbox class="vc wf hg mb">
-                <span class="tc wf xf be dd rg i gh ua">
-                  <span class="nf h vc yc vd rg gh qk -ud-z-1"></span>
-                  <img src="images/icon-play.svg" alt="Play" />
-                </span>
-                <span class="kk">CARI TAHU LEBIH LANJUT</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ===== About End ===== -->
-
-      <!-- ===== About Start ===== -->
-      <section class="ji gp uq 2xl:ud-py-35 pg">
-        <div class="bb ze ki xn wq">
-          <div class="tc wf gg qq">
-            <!-- About Images -->
-            <div class="animate_left xc gn gg jn/2 i">
-              <div>
-                <img src="images/shape-05.svg" alt="Shape" class="h -ud-left-5 x" />
-                <img src="images/about-01.png" alt="About" class="ib" />
-                <img src="images/about-02.png" alt="About" />
-              </div>
-              <div>
-                <img src="images/shape-06.svg" alt="Shape" />
-                <img src="images/about-03.png" alt="About" class="ob gb" />
-                <img src="images/shape-07.svg" alt="Shape" class="bb" />
-              </div>
-            </div>
-
-            <!-- About Content -->
-            <div class="animate_right jn/2">
-              <h4 class="ek yj mk gb">Why Choose Us</h4>
-              <h2 class="fk vj zp pr kk wm qb">Belajar Otomotif</h2>
-              <p class="uo">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
-
-              <a href="https://www.youtube.com/watch?v=xcJtL7QggTI" data-fslightbox class="vc wf hg mb">
-                <span class="tc wf xf be dd rg i gh ua">
-                  <span class="nf h vc yc vd rg gh qk -ud-z-1"></span>
-                  <img src="images/icon-play.svg" alt="Play" />
-                </span>
-                <span class="kk">CARI TAHU LEBIH LANJUT</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ===== About End ===== -->
-
-      <!-- ===== Services Start ===== -->
-      <section class="lj tp kr">
-        <!-- Section Title Start -->
-        <div
-          x-data="{ sectionTitle: `We Offer The Best Quality Service for You`, sectionTitleText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`}"
-        >
-          <div class="animate_top bb ze rj ki xn vq">
-    <h2
-            x-text="sectionTitle"
-            class="fk vj pr kk wm on/5 gq/2 bb _b"
-    >
-    </h2>
-    <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
-</div>
-
-
-        </div>
-        <!-- Section Title End -->
-
-        <div class="bb ze ki xn yq mb en">
-          <div class="wc qf pn xo ng">
-            <!-- Service Item -->
-            <div class="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/icon-04.svg" alt="Icon" />
-              <h4 class="ek zj kk wm nb _b">Crafted for Startups</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
-            </div>
-
-            <!-- Service Item -->
-            <div class="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/icon-05.svg" alt="Icon" />
-              <h4 class="ek zj kk wm nb _b">High-quality Design</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
-            </div>
-
-            <!-- Service Item -->
-            <div class="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/icon-06.svg" alt="Icon" />
-              <h4 class="ek zj kk wm nb _b">All Essential Sections</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
-            </div>
-
-            <!-- Service Item -->
-            <div class="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/icon-07.svg" alt="Icon" />
-              <h4 class="ek zj kk wm nb _b">Speed Optimized</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
-            </div>
-
-            <!-- Service Item -->
-            <div class="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/icon-05.svg" alt="Icon" />
-              <h4 class="ek zj kk wm nb _b">Fully Customizable</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
-            </div>
-
-            <!-- Service Item -->
-            <div class="animate_top sg oi pi zq ml il am cn _m">
-              <img src="images/icon-06.svg" alt="Icon" />
-              <h4 class="ek zj kk wm nb _b">Regular Updates</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ===== Services End ===== -->
-
-      <!-- ===== Blog Start ===== -->
-      <section class="ji gp uq">
-        <!-- Section Title Start -->
-        <div
-          x-data="{ sectionTitle: `Berita Terkini`, sectionTitleText: `Silahkan lihat-lihat dengan beberapa berita terkini, tips, belajar otomotif, dan sebagainya dari kami.`}"
-        >
-          <div class="animate_top bb ze rj ki xn vq">
-    <h2
-            x-text="sectionTitle"
-            class="fk vj pr kk wm on/5 gq/2 bb _b"
-    >
-    </h2>
-    <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
-</div>
-        </div>
-        <!-- Section Title End -->
-
-        <div class="bb ye ki xn vq jb jo">
-          <div class="wc qf pn xo zf iq">
-            <!-- Blog Item -->
-            <div class="animate_top sg vk rm xm">
-              <div class="c rc i z-1 pg">
-                <img class="w-full" src="images/blog-01.png" alt="Blog" />
-
-                <div
-                  class="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10"
-                >
-                  <a href="./blog-single.html" class="vc ek rg lk gh sl ml il gi hi"
-                    >Read More</a
-                  >
+                <div class="wc qf pn dg cb">
+                  <img src="images/blog-04.png" alt="Blog" />
+                  <img src="images/blog-05.png" alt="Blog" />
                 </div>
+
+                <h2 class="ek vj 2xl:ud-text-title-lg kk wm nb qb">The powerful force of humanity</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis nibh lorem. Duis sed odio lorem. In a efficitur leo. Ut venenatis rhoncus quam sed condimentum. Curabitur vel
+                  turpis in dolor volutpat imperdiet in ut mi. Integer non volutpat nulla. Nunc elementum elit viverra, tempus quam non, interdum ipsum.
+                </p>
+
+                <ul class="tc wf bg sb">
+                  <li>
+                    <p class="sj kk wm tb">Share On:</p>
+                  </li>
+                  <li>
+                    <a href="#" class="tc wf xf yd ad rg ml il ih wk">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_47_28)">
+                      <path d="M11.6663 11.25H13.7497L14.583 7.91663H11.6663V6.24996C11.6663 5.39163 11.6663 4.58329 13.333 4.58329H14.583V1.78329C14.3113 1.74746 13.2855 1.66663 12.2022 1.66663C9.93967 1.66663 8.33301 3.04746 8.33301 5.58329V7.91663H5.83301V11.25H8.33301V18.3333H11.6663V11.25Z" fill="white"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_47_28">
+                      <rect width="20" height="20" fill="white"/>
+                      </clipPath>
+                      </defs>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="tc wf xf yd ad rg ml il jh wk">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_47_47)">
+                      <path d="M18.4683 4.71327C17.8321 4.99468 17.1574 5.1795 16.4666 5.26161C17.1947 4.82613 17.7397 4.14078 17.9999 3.33327C17.3166 3.73994 16.5674 4.02494 15.7866 4.17911C15.2621 3.61792 14.5669 3.24574 13.809 3.12043C13.0512 2.99511 12.2732 3.12368 11.596 3.48615C10.9187 3.84862 10.3802 4.42468 10.0642 5.12477C9.74812 5.82486 9.67221 6.60976 9.84825 7.35744C8.46251 7.28798 7.10686 6.92788 5.86933 6.30049C4.63179 5.67311 3.54003 4.79248 2.66492 3.71577C2.35516 4.24781 2.19238 4.85263 2.19326 5.46827C2.19326 6.67661 2.80826 7.74411 3.74326 8.36911C3.18993 8.35169 2.64878 8.20226 2.16492 7.93327V7.97661C2.16509 8.78136 2.44356 9.56129 2.95313 10.1842C3.46269 10.807 4.17199 11.2345 4.96075 11.3941C4.4471 11.5333 3.90851 11.5538 3.38576 11.4541C3.60814 12.1468 4.04159 12.7526 4.62541 13.1867C5.20924 13.6208 5.9142 13.8614 6.64159 13.8749C5.91866 14.4427 5.0909 14.8624 4.20566 15.1101C3.32041 15.3577 2.39503 15.4285 1.48242 15.3183C3.0755 16.3428 4.93 16.8867 6.82409 16.8849C13.2349 16.8849 16.7408 11.5741 16.7408 6.96827C16.7408 6.81827 16.7366 6.66661 16.7299 6.51827C17.4123 6.02508 18.0013 5.41412 18.4691 4.71411L18.4683 4.71327Z" fill="white"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_47_47">
+                      <rect width="20" height="20" fill="white"/>
+                      </clipPath>
+                      </defs>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="tc wf xf yd ad rg ml il kh wk">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_47_50)">
+                      <path d="M11.1417 1.74502C9.14781 1.47074 7.12195 1.92715 5.43827 3.02999C3.75459 4.13283 2.52679 5.80761 1.98158 7.74508C1.43637 9.68255 1.61059 11.7519 2.47205 13.5709C3.33351 15.3899 4.82404 16.8359 6.66841 17.6417C6.61854 17.0015 6.66432 16.3575 6.80425 15.7309C6.95841 15.0317 7.88425 11.1784 7.88425 11.1784C7.69989 10.7651 7.60775 10.3167 7.61425 9.86419C7.61425 8.62669 8.32841 7.70336 9.21675 7.70336C9.37634 7.70103 9.53455 7.7331 9.68064 7.79738C9.82673 7.86166 9.95727 7.95665 10.0634 8.07588C10.1695 8.19511 10.2487 8.33578 10.2955 8.48835C10.3424 8.64091 10.3559 8.80178 10.3351 8.96002C10.3351 9.71002 9.85342 10.845 9.60175 11.91C9.55201 12.1053 9.54886 12.3096 9.59254 12.5064C9.63621 12.7031 9.72551 12.8869 9.85321 13.0428C9.98092 13.1987 10.1435 13.3225 10.3278 13.4041C10.5121 13.4857 10.713 13.5228 10.9142 13.5125C12.4959 13.5125 13.5559 11.4867 13.5559 9.09502C13.5559 7.26169 12.3417 5.88836 10.1034 5.88836C9.56789 5.86755 9.03373 5.95579 8.53336 6.14773C8.03298 6.33968 7.57684 6.63131 7.19262 7.00493C6.8084 7.37855 6.50413 7.82636 6.29827 8.32117C6.09241 8.81598 5.98926 9.34746 5.99508 9.88336C5.97122 10.4778 6.163 11.0608 6.53508 11.525C6.60461 11.5769 6.65538 11.65 6.67973 11.7333C6.70408 11.8166 6.70069 11.9055 6.67008 11.9867C6.63175 12.14 6.53508 12.5059 6.49675 12.64C6.48877 12.6855 6.47023 12.7285 6.4426 12.7655C6.41497 12.8026 6.37904 12.8326 6.33769 12.8532C6.29634 12.8738 6.25073 12.8844 6.20454 12.8841C6.15835 12.8838 6.11286 12.8727 6.07175 12.8517C4.91841 12.39 4.37508 11.1209 4.37508 9.67169C4.37508 7.29919 6.36175 4.45919 10.3367 4.45919C13.5001 4.45919 15.6034 6.77336 15.6034 9.24836C15.6034 12.5059 13.7892 14.955 11.1084 14.955C10.7077 14.9678 10.3103 14.8794 9.95286 14.6979C9.59541 14.5164 9.2895 14.2477 9.06342 13.9167C9.06342 13.9167 8.58175 15.8467 8.48675 16.2117C8.29282 16.8423 8.00667 17.4407 7.63758 17.9875C8.40675 18.2209 9.20591 18.3375 10.0092 18.3342C11.1039 18.3351 12.188 18.12 13.1994 17.7013C14.2108 17.2827 15.1297 16.6686 15.9035 15.8943C16.6772 15.12 17.2907 14.2007 17.7086 13.1889C18.1266 12.1772 18.3409 11.093 18.3393 9.99836C18.3382 7.98586 17.6091 6.04169 16.2864 4.52484C14.9638 3.00799 13.137 2.02091 11.1434 1.74586L11.1417 1.74502Z" fill="white"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_47_50">
+                      <rect width="20" height="20" fill="white"/>
+                      </clipPath>
+                      </defs>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="tc wf xf yd ad rg ml il lh wk">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_47_53)">
+                      <path d="M5.78353 4.16665C5.78331 4.60867 5.6075 5.03251 5.29478 5.34491C4.98207 5.65732 4.55806 5.8327 4.11603 5.83248C3.674 5.83226 3.25017 5.65645 2.93776 5.34373C2.62536 5.03102 2.44997 4.60701 2.4502 4.16498C2.45042 3.72295 2.62622 3.29912 2.93894 2.98671C3.25166 2.67431 3.67567 2.49892 4.1177 2.49915C4.55972 2.49937 4.98356 2.67517 5.29596 2.98789C5.60837 3.30061 5.78375 3.72462 5.78353 4.16665ZM5.83353 7.06665H2.5002V17.5H5.83353V7.06665ZM11.1002 7.06665H7.78353V17.5H11.0669V12.025C11.0669 8.97498 15.0419 8.69165 15.0419 12.025V17.5H18.3335V10.8916C18.3335 5.74998 12.4502 5.94165 11.0669 8.46665L11.1002 7.06665Z" fill="white"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_47_53">
+                      <rect width="20" height="20" fill="white"/>
+                      </clipPath>
+                      </defs>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+
+            <div class="jn/2 so">
+              <div class="animate_top fb">
+                <form action="#">
+                  <div class="i">
+                    <input
+                      type="text"
+                      placeholder="Search Here..."
+                      class="vd sm _g ch pm vk xm rg gm dm/40 dn/40 li mi"
+                    />
+
+                    <button class="h r q _h">
+                      <svg
+                        class="th ul ml il"
+                        width="21"
+                        height="21"
+                        viewBox="0 0 21 21"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16.031 14.617L20.314 18.899L18.899 20.314L14.617 16.031C13.0237 17.3082 11.042 18.0029 9 18C4.032 18 0 13.968 0 9C0 4.032 4.032 0 9 0C13.968 0 18 4.032 18 9C18.0029 11.042 17.3082 13.0237 16.031 14.617ZM14.025 13.875C15.2941 12.5699 16.0029 10.8204 16 9C16 5.132 12.867 2 9 2C5.132 2 2 5.132 2 9C2 12.867 5.132 16 9 16C10.8204 16.0029 12.5699 15.2941 13.875 14.025L14.025 13.875Z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </form>
               </div>
 
-              <div class="yh">
-                <div class="tc uf wf ag jq">
-                  <div class="tc wf ag">
-                    <img src="images/icon-man.svg" alt="User" />
-                    <p>Musharof Chy</p>
+              <div class="animate_top fb">
+                <h4 class="tj kk wm qb">Categories</h4>
+
+                <ul>
+                  <li class="ql vb du-ease-in-out il xl">
+                    <a href="#">Blog</a>
+                  </li>
+                  <li class="ql vb du-ease-in-out il xl">
+                    <a href="#">Events</a>
+                  </li>
+                  <li class="ql vb du-ease-in-out il xl">
+                    <a href="#">Grids</a>
+                  </li>
+                  <li class="ql vb du-ease-in-out il xl">
+                    <a href="#">News</a>
+                  </li>
+                  <li class="ql vb du-ease-in-out il xl">
+                    <a href="#">Rounded</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="animate_top">
+                <h4 class="tj kk wm qb">Related Posts</h4>
+
+                <div>
+                  <div class="tc fg 2xl:ud-gap-6 qb">
+                    <img src="images/blog-small-01.png" alt="Blog" />
+                    <h5 class="wj kk wm xl bn ml il">
+                      <a href="#">Free advertising for your online business</a>
+                    </h5>
                   </div>
-                  <div class="tc wf ag">
-                    <img src="images/icon-calender.svg" alt="Calender" />
-                    <p>23 Oct, 2023</p>
+                  <div class="tc fg 2xl:ud-gap-6 qb">
+                    <img src="images/blog-small-02.png" alt="Blog" />
+                    <h5 class="wj kk wm xl bn ml il">
+                      <a href="#">9 simple ways to improve your design skills</a>
+                    </h5>
+                  </div>
+                  <div class="tc fg 2xl:ud-gap-6">
+                    <img src="images/blog-small-03.png" alt="Blog" />
+                    <h5 class="wj kk wm xl bn ml il">
+                      <a href="#">Tips to quickly improve your coding speed.</a>
+                    </h5>
                   </div>
                 </div>
-                <h4 class="ek tj ml il kk wm xl eq lb">
-                  <a href="blog-single.html">Tips: Merawat Shock Breaker pada Sepeda Motor</a>
-                </h4>
-              </div>
-            </div>
-
-            <!-- Blog Item -->
-            <div class="animate_top sg vk rm xm">
-              <div class="c rc i z-1 pg">
-                <img class="w-full" src="images/blog-02.png" alt="Blog" />
-
-                <div
-                  class="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10"
-                >
-                  <a href="./blog-single.html" class="vc ek rg lk gh sl ml il gi hi"
-                    >Read More</a
-                  >
-                </div>
-              </div>
-
-              <div class="yh">
-                <div class="tc uf wf ag jq">
-                  <div class="tc wf ag">
-                    <img src="images/icon-man.svg" alt="User" />
-                    <p>Musharof Chy</p>
-                  </div>
-                  <div class="tc wf ag">
-                    <img src="images/icon-calender.svg" alt="Calender" />
-                    <p>23 Oct, 2023</p>
-                  </div>
-                </div>
-                <h4 class="ek tj ml il kk wm xl eq lb">
-                  <a href="blog-single.html">Belajar Otomotif: Apa itu Mesin Rotary?</a>
-                </h4>
-              </div>
-            </div>
-
-            <!-- Blog Item -->
-            <div class="animate_top sg vk rm xm">
-              <div class="c rc i z-1 pg">
-                <img class="w-full" src="images/blog-03.png" alt="Blog" />
-
-                <div
-                  class="im h r s df vd yc wg tc wf xf al hh/20 nl il z-10"
-                >
-                  <a href="./blog-single.html" class="vc ek rg lk gh sl ml il gi hi"
-                    >Read More</a
-                  >
-                </div>
-              </div>
-
-              <div class="yh">
-                <div class="tc uf wf ag jq">
-                  <div class="tc wf ag">
-                    <img src="images/icon-man.svg" alt="User" />
-                    <p>Musharof Chy</p>
-                  </div>
-                  <div class="tc wf ag">
-                    <img src="images/icon-calender.svg" alt="Calender" />
-                    <p>23 Oct, 2023</p>
-                  </div>
-                </div>
-                <h4 class="ek tj ml il kk wm xl eq lb">
-                  <a href="blog-single.html">Berita Otomotif: Mazda Iconic SP : Konsep Rotary EV terbaru dari Mazda</a>
-                </h4>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- ===== Blog End ===== --> 
+      <!-- ===== Blog Single End ===== -->
 
       <!-- ===== CTA Start ===== -->
       <section class="i pg gh ji">
@@ -660,12 +472,14 @@
     <div class="bh ch pm tc uf sf yo wf xf ap cg fp bj">
       <div class="animate_top">
         <ul class="tc wf gg">
+          <li><a href="#" class="xl">English</a></li>
           <li><a href="#" class="xl">Privacy Policy</a></li>
           <li><a href="#" class="xl">Support</a></li>
         </ul>
       </div>
+
       <div class="animate_top">
-        <p>&copy; 2024 Berkat Auto. All rights reserved</p>
+        <p>&copy; 2025 Base. All rights reserved</p>
       </div>
     </div>
     <!-- Footer Bottom -->
@@ -685,6 +499,7 @@
     <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
   </svg>
 </button>
+
     <!-- ====== Back To Top End ===== -->
   <script defer src="bundle.js"></script></body>
 </html>
