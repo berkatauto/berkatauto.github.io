@@ -1,5 +1,5 @@
 // Replace these values with your actual form data and API endpoint
-const apiUrl = 'https://api.example.com/signup';
+const apiUrl = 'https://asia-southeast2-gis-moni.cloudfunctions.net/berkatauto-signUp';
 const fullnameInput = document.getElementById('fullname');
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
@@ -26,6 +26,7 @@ fetch(apiUrl, {
     if(data.status === true) {
         window.location.href = '../pages/signin.html';
     // Handle success response
+        document.getElementById('signupInformation').innerHTML = 'Sign Up Sukses! Sekarang kalian dapat login menggunakan akun yang kalian buat.';
         console.log('SignUp Sukses! Sekarang kalian dapat login menggunakan akun yang kalian buat.', data);
     }
   })
