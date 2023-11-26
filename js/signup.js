@@ -26,7 +26,8 @@ fetch(apiUrl, {
     if(data.status === true) {
         window.location.href = '../pages/signin.html';
     // Handle success response
-        document.getElementById('signupInformation').innerHTML = 'Sign Up Sukses! Sekarang kalian dapat login menggunakan akun yang kalian buat.';
+        alert('Sign Up Sukses! Sekarang kalian dapat login menggunakan akun yang kalian buat.')
+        document.getElementById('signupInformation').innerHTML = '<p>Sign Up Sukses! Sekarang kalian dapat login menggunakan akun yang kalian buat.</p>';
         console.log('SignUp Sukses! Sekarang kalian dapat login menggunakan akun yang kalian buat.', data);
     }
   })
