@@ -47,29 +47,3 @@ loginForm.addEventListener("submit", async (event) => {
             console.error("Errorr:", error);
         });
 });
-
-/**
-// Handle form submission
-loginForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    const username = usernameInput.value;
-    const password = passwordInput.value;
-    
-    // Kirim permintaan HTTP POST ke server Golang
-    const response = await fetch("http://localhost:8080/login", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ username, password })
-    });
-
-    if (response.ok) {
-        // Redirect user to user.html upon successful login
-        window.location.href = "user.html";
-    } else {
-        // Handle failed login
-        console.log("Login failed. Please check your username and password.");
-    }
-});
- */
