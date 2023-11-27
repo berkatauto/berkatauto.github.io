@@ -4,7 +4,7 @@ const signUpForm = document.getElementById('signUpForm');
 const fullnameInput = document.getElementById('fullname');
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
-const journalInput = document.getElementById('journal_status');
+const journalInput = document.getElementById('journal_bool');
 const submitButton = document.getElementById('submit');
 
 

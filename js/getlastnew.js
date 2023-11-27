@@ -4,9 +4,7 @@ const loadnews = document.getElementById('loadnews');
 
 articleForm.addEventListener('loadnews', async (event) => {
     fetch(apiUrl, {
-        method: 'GET',
-        body:   formDataObject,
-    })
+        method: 'GET',})
     event.preventDefault();
     const title = getElementById('title').value;
 });
