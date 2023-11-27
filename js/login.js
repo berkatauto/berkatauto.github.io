@@ -37,7 +37,7 @@ loginForm.addEventListener("submit", async (event) => {
         .then(data => {
             if (data.status === true) {
                 // Redirect user to user.html upon successful login
-                window.location.href = "../pages/dashboard.html";
+                window.location.href = "../pages/dsb/dashboard.html";
             } else {
                 // Handle failed login
                 // window.location.href = "../pages/signin.html";
