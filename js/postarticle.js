@@ -21,7 +21,7 @@ const validation = () => {
 };
 // Kirim data artikel ke API
 
-fetch('https://asia-southeast2-gis-moni.cloudfunctions.net/berkatauto-postArticle', {
+fetch('', {
     method: 'POST',
     body:   formDataObject,
 })
@@ -29,7 +29,7 @@ fetch('https://asia-southeast2-gis-moni.cloudfunctions.net/berkatauto-postArticl
 .then(data => {
     if (data.status === true) {
         // Redirect user to user.html upon successful login
-        window.location.href = '../pages/blog-single.html';
+        window.location.href = '';
     } else {
         errorMessage.textContent = 'Error: '; // pesan kesalahan
     }
