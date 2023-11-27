@@ -1,5 +1,6 @@
 // Replace these values with your actual form data and API endpoint
 const apiUrl = 'https://asia-southeast2-gis-moni.cloudfunctions.net/berkatauto-signUp';
+const signUpForm = document.getElementById('signUpForm');
 const fullnameInput = document.getElementById('fullname');
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');

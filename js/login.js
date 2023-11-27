@@ -40,6 +40,8 @@ loginForm.addEventListener("submit", async (event) => {
                 window.location.href = "../pages/dashboard.html";
             } else {
                 // Handle failed login
+                // window.location.href = "../pages/signin.html";
+                // document.getElementById("loginInformation").innerHTML = "<p>Sign In Gagal! Coba lagi.</p>";
                 errorMessage.textContent = "Userr not found"; // pesan kesalahan
             }
         })
