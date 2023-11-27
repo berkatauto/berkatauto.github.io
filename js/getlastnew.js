@@ -1,13 +1,10 @@
-const apiUrl = 'https://asia-southeast2-gis-moni.cloudfunctions.net/berkatauto-signUp';
-// const articleForm = document.getElementById('articleForm');
+const apiUrl = '';
 const titleInput = document.getElementById('title');
-// const contentInput = document.getElementById('content');
-// const submitButton = document.getElementById('submit');
-const loadnewsButton = document.getElementById('loadnews');
+const loadnewsdiv = document.getElementById('loadnews');
 
 articleForm.addEventListener('loadnews', async (event) => {
     event.preventDefault();
-    const title = titleInput.value;
+    const title = getElementById('title').value;
     // const content = contentInput.value;
 
     // Kirim data artikel ke API
