@@ -19,7 +19,18 @@ const validation = () => {
         submitButton.disabled = true;
     }
 };
-// Panggil fungsi validation saat input berubah
-titleInput.addEventListener('input', validation);
-contentInput.addEventListener('input', validation);
 // Kirim data artikel ke API
+
+fetch('https://asia-southeast2-gis-moni.cloudfunctions.net/berkatauto-postArticle', {
+    method: 'POST',
+    body:   formDataObject,
+})
+.then(response => response.json())
+.then(data => {
+    if (data.status === true) {
+        // Redirect user to user.html upon successful login
+        window.location.href = '../pages/blog-single.html';
+    } else {
+        errorMessage.textContent = 'Error: '; // pesan kesalahan
+    }
+})
