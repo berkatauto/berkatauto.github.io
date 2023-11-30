@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Details | Base - Tailwind CSS Startup Template</title>
-  <link rel="icon" href="favicon.ico"><link href="../css/style.css" rel="stylesheet"></head>
+    <title>BERKATAUTO</title>
+  <link rel="icon" href="../images/berkatauto.ico">
+  <link href="../css/style.css" rel="stylesheet"></head>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css"  rel="stylesheet" />
   <body
     x-data="{ page: 'blog-single', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
@@ -50,7 +51,7 @@
       <nav>
         <ul class="tc _o sf yo cg ep">
           <li><a href="../index.html" class="xl" :class="{ 'mk': page === 'home' }">Home</a></li>
-          <li><a href="../index.html#features" class="xl">Features</a></li>
+          <!-- <li><a href="../index.html#features" class="xl">Features</a></li> -->
           <li class="c i" x-data="{ dropdown: false }">
             <a
               href="#"
@@ -70,7 +71,7 @@
             <!-- Dropdown Start -->
             <ul class="a" :class="{ 'tc': dropdown }">
               <li><a href="./dsb/dashboard.html" class="xl" :class="{ 'mk': page === 'signin' }">Dashboard</a></li>
-              <li><a href="#" class="xl" :class="{ 'mk': page === 'signup' }">Stats</a></li>
+              <!-- <li><a href="#" class="xl" :class="{ 'mk': page === 'signup' }">Stats</a></li> -->
             </ul>
             <!-- Dropdown End -->
           </li>
@@ -134,7 +135,7 @@
           <div class="tc sf yo zf kq">
             <div class="ro">
               <div class="animate_top rounded-md shadow-solid-13 bg-white dark:bg-blacksection border border-stroke dark:border-strokedark p-7.5 md:p-10">
-                <img src="../images/mobil-animasi.jpg" alt="Blog" />
+                <img src="../images/mobil.jpeg" alt="Blog" />
 
                 <h2 class="ek vj 2xl:ud-text-title-lg kk wm nb gb">Tips : Cara Agar Mur Roda Mobil Mudah Dibuka</h2>
 
@@ -180,7 +181,7 @@
 
                 <div class="wc qf pn dg cb">
                   <img src="../images/mur-mobil.jpg" alt="Blog" />
-                  <img src="../images/mobil.jpeg" alt="Blog" />
+                  <img src="../images/mobil-animasi.jpg" alt="Blog" />
                 </div>
 
                 <ul class="tc wf bg sb">
@@ -251,7 +252,7 @@
             <div class="jn/2 so">
               <div class="animate_top fb">
                 <form action="#">
-                  <div class="i">
+                  <!-- <div class="i">
                     <input
                       type="text"
                       placeholder="Search Here..."
@@ -272,7 +273,7 @@
                         />
                       </svg>
                     </button>
-                  </div>
+                  </div> -->
                 </form>
               </div>
 
@@ -281,13 +282,13 @@
 
                 <ul>
                   <li class="ql vb du-ease-in-out il xl">
-                    <a href="#">Berita Otomotif</a>
+                    <a href="./blog-berita.html">Berita Otomotif</a>
                   </li>
                   <li class="ql vb du-ease-in-out il xl">
-                    <a href="#">Tips Otomotif</a>
+                    <a href="./blog-tips.html">Tips Otomotif</a>
                   </li>
                   <li class="ql vb du-ease-in-out il xl">
-                    <a href="#">Belajar Otomotif</a>
+                    <a href="./blog-belajar.html">Belajar Otomotif</a>
                   </li>
                 </ul>
               </div>
@@ -297,23 +298,23 @@
 
                 <div>
                   <div class="tc fg 2xl:ud-gap-6 qb">
-                    <img src="../images/blog-small-01.png" alt="Blog" />
+                    <img src="../images/mobil-listrik.ico" alt="Blog" />
                     <h5 class="wj kk wm xl bn ml il">
-                      <a href="#">Berita Otomotif : </a>
+                      <a href="./blog-berita.html">Berita Otomotif : Hyundai Siapkan Mobil Listrik Baru, Pakai Baterai Buatan Lokal</a>
                     </h5>
                   </div>
                   <div class="tc fg 2xl:ud-gap-6 qb">
-                    <img src="../images/blog-small-02.png" alt="Blog" />
+                    <img src="../images/rem-abs.ico" alt="Blog" />
                     <h5 class="wj kk wm xl bn ml il">
-                      <a href="#">Berita Otomotif :</a>
+                      <a href="./blog-belajar.html">Belajar Otomotif : Cara Memperbaiki Rem ABS Sepeda Motor</a>
                     </h5>
                   </div>
-                  <div class="tc fg 2xl:ud-gap-6">
+                  <!-- <div class="tc fg 2xl:ud-gap-6">
                     <img src="../images/blog-small-03.png" alt="Blog" />
                     <h5 class="wj kk wm xl bn ml il">
                       <a href="#">Belajar Otomotif : Mengganti Ban Dalam Dirumah</a>
                     </h5>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -338,7 +339,7 @@
               </p>
             </div>
             <div class="animate_right bf">
-              <a href="#" class="vc ek kk hh rg ol il cm gi hi">
+              <a href="./signup.html" class="vc ek kk hh rg ol il cm gi hi">
                   Get Started Now
               </a>
             </div>
@@ -359,7 +360,7 @@
                   <h2>BERKAT AUTO</h2>
               </a>
               <p class="lc fb">Logo dan berbagai kontennya dibawah kepemilikan Berkat Auto.</p>
-              <p class="lc fb">Dilarang dengan keras menjiplak dan mempublish ulang konten dan berbagai artikel dari kami maupun berbagai penulis konten dari komunitas kecuali atas persetujuan jurnal.</p>
+              <p class="lc fb">Dilarang dengan keras menjiplak dan mempublish ulang konten dan berbagai artikel dari kami maupun berbagai penulis konten dari komunitas kecuali atas persetujuan penulis.</p>
             </div>
     
             <div class="vd ro tc sf rn un gg vn">
@@ -367,19 +368,19 @@
                 <h4 class="kk wm tj ec">Quick Links</h4>
     
                 <ul>
-                  <li><a href="#" class="sc xl vb">Home</a></li>
-                  <li><a href="#" class="sc xl vb">Tips</a></li>
+                  <li><a href="../index.html" class="sc xl vb">Home</a></li>
+                  <li><a href="./blog-tips.html" class="sc xl vb">Tips</a></li>
                   <li>
-                    <a href="#" class="sc xl vb">
-                      Careers 
-                      <span class="sc ek uj lk nh rg zi _i nc">Berita</span>
+                    <a href="./blog-belajar.html" class="sc xl vb">
+                      Belajar 
+                      <!-- <span class="sc ek uj lk nh rg zi _i nc">Berita</span> -->
                     </a>
                   </li>
-                  <li><a href="#" class="sc xl vb">Belajar</a></li>
+                  <li><a href="./blog-berita.html" class="sc xl vb">Berita</a></li>
                 </ul>
               </div>
     
-              <div class="animate_top">
+              <!-- <div class="animate_top">
                 <h4 class="kk wm tj ec">Services</h4>
     
                 <ul>
@@ -429,7 +430,7 @@
                     </button>
                   </div>
                 </form>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -438,10 +439,10 @@
         <!-- Footer Bottom -->
         <div class="bh ch pm tc uf sf yo wf xf ap cg fp bj">
           <div class="animate_top">
-            <ul class="tc wf gg">
+            <!-- <ul class="tc wf gg">
               <li><a href="#" class="xl">Privacy Policy</a></li>
               <li><a href="#" class="xl">Support</a></li>
-            </ul>
+            </ul> -->
           </div>
           <div class="animate_top">
             <p>&copy; 2024 Berkat Auto. All rights reserved</p>
@@ -466,6 +467,7 @@
 </button>
 
     <!-- ====== Back To Top End ===== -->
-  <script defer src="../js/bundle.js"></script></body>
+  <!-- <script defer src="../js/bundle.js"></script></body> -->
+  <script type="module" src="http://cdn.jsdelivr.net/gh/berkatauto/berkat-webjs/bundle.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
 </html>
