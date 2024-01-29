@@ -1,36 +1,43 @@
-// Isian form untuk posting artikel
-document.getElementById('postArticleForm')
-document.getElementById('title')
-document.getElementById('content')
-document.getElementById('submit')
-// Mengambil nilai dari elemen input pada HTML
-const postArticleForm = document.getElementById('postArticleForm');
-const titleInput = document.getElementById('title');
-const contentInput = document.getElementById('content');
-const submitButton = document.getElementById('submit');
-const errorMessage = document.getElementById('error-message');
-// Fungsi untuk mengecek apakah form telah diisi dengan benar
-const validation = () => {
-    const title = titleInput.value;
-    const content = contentInput.value;
-    if (title !== '' && content !== '') {
-        submitButton.disabled = false;
-    } else {
-        submitButton.disabled = true;
-    }
-};
-// Kirim data artikel ke API
+document.getElementById('postarticleForm').addEventListener('submit', function (e) {
+    e.preventDefault();
 
-fetch('', {
-    method: 'POST',
-    body:   formDataObject,
-})
-.then(response => response.json())
-.then(data => {
-    if (data.status === true) {
-        // Redirect user to user.html upon successful login
-        window.location.href = '';
-    } else {
-        errorMessage.textContent = 'Error: '; // pesan kesalahan
-    }
-})
+    // Ambil data formulir
+    const title = document.getElementById('title').value;
+    const category = document.getElementById('category').value;
+    const tags = document.getElementById('tags').value;
+    const imageInput = document.getElementById('image_input');
+    const content = document.getElementById('content').value;
+
+    // Buat objek FormData untuk mengirim data formulir
+    const formData = new FormData();
+    formData.append('title', title);
+    formData.append('category', category);
+    formData.append('tags', tags);
+    formData.append('image', imageInput.files[0]);
+    formData.append('content', content);
+
+    // Lakukan permintaan POST ke Google Cloud Function
+    fetch('https://asia-southeast2-spheric-entity-401507.cloudfunctions.net/articlepost', {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => {
+        // Periksa status respons
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        // Coba menguraikan respons JSON
+        return response.json();
+    })
+    .then(data => {
+        // Tangani respons dari server
+        console.log(data);
+        alert('Artikel berhasil dikirim!');
+    })
+    .catch(error => {
+        // Tangani kesalahan
+        console.error('Kesalahan:', error);
+        alert('Error saat mengirim artikel. Silakan coba lagi.');
+    });
+});
