@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(response => response.json())
         .then(data => {
             console.log('Success:', data);
+            alert('Data berhasil disubmit!')
             // Add any further actions after successful submission
         })
         .catch((error) => {
