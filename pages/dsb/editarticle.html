@@ -95,40 +95,43 @@
     
         <div class="w-full h-screen overflow-x-hidden border-t flex flex-col">
             <main class="w-full flex-grow p-6">
-                <h1 class="w-full text-3xl text-black pb-6">Edit Artikel</h1>
+                <h1 class="w-full text-3xl text-black pb-6">Buat Artikel Baru</h1>
                 <div class="flex flex-wrap">
                     <div class="w-full lg:w-1/2 my-6 pr-0 lg:pr-2">
                         <div class="leading-loose">
                             <form class="p-10 bg-white rounded shadow-xl" id="editarticleForm">
-                            <form class="p-10 bg-white rounded shadow-xl" id="editarticleForm">
                                 <div class="">
-                                    <label class="block text-4 text-gray-600" for="article_title">Judul Artikel</label>
+                                    <label class="block text-4 text-gray-600" for="title">Judul Artikel</label>
                                     <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="title" name="title" type="text" required="" placeholder="">
                                 </div>
                                 <div class="">
-                                    <label class="block text-4 text-gray-600" for="article_title">Kategori</label>
+                                    <label class="block text-4 text-gray-600" for="author">Nama Penulis</label>
+                                    <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="author" name="author" type="text" required="" placeholder="">
+                                </div>
+                                <div class="">
+                                    <label class="block text-4 text-gray-600" for="category">Kategori</label>
                                     <select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                         <option selected>Pilih Kategori</option>
                                         <option value="Tips Otomotif">Tips Otomotif</option>
                                         <option value="Berita Otomotif">Berita Otomotif</option>
-                                        <option value="Belajar Belajar">Belajar Otomotif</option>
+                                        <option value="Belajar Otomotif">Belajar Otomotif</option>
                                     </select>
-                                    </div>
-                                <div class="mt-2">
-                                    <label class="block text-4 text-gray-600" for="article_tags">Tags</label>
-                                    <input class="w-full px-5  py-4 text-gray-700 bg-gray-200 rounded" id="tags" name="tags" type="text" required="" placeholder="">
                                 </div>
                                 <div class="mt-2">
+                                    <label class="block text-4 text-gray-600" for="tags">Tags</label>
+                                    <input class="w-full px-5 py-4 text-gray-700 bg-gray-200 rounded" id="tag" name="tags" type="text" required="" placeholder="">
+                                </div>
+                                <!-- <div class="mt-2">
                                     <label class="block text-4 text-gray-600" for="article_image">Tambah Gambar Artikel</label>
                                     <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="image_input" type="file">
-                                </div>
+                                </div> -->
                                 <div class="mt-2">
                                     <label class=" block text-4 text-gray-600" for="journal">Isi Artikel</label>
-                                    <textarea class="w-full px-5 h-40 text-gray-700 bg-gray-200 rounded" id="content" name="content" rows="6" required="" placeholder=""></textarea>
+                                    <textarea class="w-full px-5 h-40 text-gray-700 bg-gray-200 rounded" id="paragraph" name="paragraph" rows="6" required="" placeholder=""></textarea>
                                 </div>
-                                <button>Bantuan Pemformatan</button>
+                                <!-- <button>Bantuan Pemformatan</button> -->
                                 <div class="mt-6">
-                                    <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit">Update</button>
+                                    <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded"  type="submit">Submit</button>
                                 </div>
                             </form>
                         </div>
@@ -142,7 +145,7 @@
     </div>
     <!-- AlpineJS -->
     <script type="module" src="../../js/editarticle.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> 
     <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
