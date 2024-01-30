@@ -7,11 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const title = document.getElementById('title').value;
         const author = document.getElementById('author').value;
         const category = document.getElementById('category').value;
+        // Generate Last Date
+        const date = new Date();
 
         const articleData = {
             title: title,
             author: author,
             category: category,
+            date: date
         };
 
         // Send data to Google Cloud Function
