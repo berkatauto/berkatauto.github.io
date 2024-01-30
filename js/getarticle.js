@@ -30,7 +30,6 @@ async function getArticles() {
 
 getArticles();
 
-// delete function
 function deleteArticle() {
     var title = document.getElementById("title").innerHTML;
     var deleteButton = document.getElementById("deleteArticle");

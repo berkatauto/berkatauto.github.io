@@ -1,37 +1,37 @@
-// postarticle.js telah diubah menjadi editarticle.js
-// Anda perlu menyesuaikan kodingan ini dengan kebutuhan dan backend yang digunakan
+document.addEventListener('DOMContentLoaded', function () {
+    const editarticleForm = document.getElementById('editarticleForm');
 
-document.getElementById('editArticleForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+    editarticleForm.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-    // Mengambil nilai dari formulir
-    const articleId = document.getElementById('articleId').value;
-    const title = document.getElementById('title').value;
-    const category = document.getElementById('category').value;
-    const tags = document.getElementById('tags').value;
-    const content = document.getElementById('content').value;
+        // Mengambil data dari formulir
+        const title = `<td id="title" class="w-1/3 text-left py-3 px-4">${data.title}</td>`;
+        const author = `<td class="w-1/3 text-left py-3 px-4">${data.author}</td>`;
+        const category = `<td class="w-1/3 text-left py-3 px-4">${data.category}</td>`;
 
-    // Menyusun data yang akan dikirimkan ke backend
-    const formData = new FormData();
-    formData.append('articleId', articleId);
-    formData.append('title', title);
-    formData.append('category', category);
-    formData.append('tags', tags);
-    formData.append('content', content);
+        // Membuat objek data untuk dikirim ke Google Cloud Function
+        const articleData = {
+            title,
+            author,
+            category,
+        };
 
-    // Menggunakan fetch API atau XMLHttpRequest untuk mengirim data ke backend
-    // Contoh menggunakan fetch API:
-    fetch('https://asia-southeast2-spheric-entity-401507.cloudfunctions.net/updatearticle', {
-        method: 'POST',
-        body: formData,
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Handle respons dari backend (misalnya, tampilkan pesan sukses/gagal)
-        console.log(data);
-    })
-    .catch(error => {
-        // Handle kesalahan koneksi atau kesalahan lainnya
-        console.error('Error:', error);
+        // Mengirim permintaan ke Google Cloud Function
+        fetch('https://asia-southeast2-spheric-entity-401507.cloudfunctions.net/updatearticle', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(articleData),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            // Handle tindakan setelah berhasil, misalnya, tampilkan pesan sukses
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            // Handle tindakan jika terjadi kesalahan, misalnya, tampilkan pesan kesalahan
+        });
     });
 });
