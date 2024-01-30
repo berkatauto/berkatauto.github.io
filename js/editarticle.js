@@ -1,37 +1,37 @@
-// postarticle.js telah diubah menjadi editarticle.js
-// Anda perlu menyesuaikan kodingan ini dengan kebutuhan dan backend yang digunakan
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('editarticleForm');
 
-document.getElementById('editArticleForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-    // Mengambil nilai dari formulir
-    const articleId = document.getElementById('articleId').value;
-    const title = document.getElementById('title').value;
-    const category = document.getElementById('category').value;
-    const tags = document.getElementById('tags').value;
-    const content = document.getElementById('content').value;
+        const title = document.getElementById('title').value;
+        const author = document.getElementById('author').value;
+        const category = document.getElementById('category').value;
 
-    // Menyusun data yang akan dikirimkan ke backend
-    const formData = new FormData();
-    formData.append('articleId', articleId);
-    formData.append('title', title);
-    formData.append('category', category);
-    formData.append('tags', tags);
-    formData.append('content', content);
+        const data = {
+            title: title,
+            author: author,
+            category: category,
+        };
 
-    // Menggunakan fetch API atau XMLHttpRequest untuk mengirim data ke backend
-    // Contoh menggunakan fetch API:
-    fetch('https://asia-southeast2-spheric-entity-401507.cloudfunctions.net/updatearticle', {
-        method: 'POST',
-        body: formData,
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Handle respons dari backend (misalnya, tampilkan pesan sukses/gagal)
-        console.log(data);
-    })
-    .catch(error => {
-        // Handle kesalahan koneksi atau kesalahan lainnya
-        console.error('Error:', error);
+        // Assuming you're using the Fetch API
+        fetch('https://asia-southeast2-spheric-entity-401507.cloudfunctions.net/updatearticle', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle success
+            console.log('Success:', data);
+            // You can add additional logic here if needed
+        })
+        .catch(error => {
+            // Handle error
+            console.error('Error:', error);
+            // You can add additional error handling logic here
+        });
     });
 });
