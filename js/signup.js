@@ -17,14 +17,11 @@ function signup() {
       "Content-Type": "application/json"
     }
   }).then((response) => {
-    console.log(response)
-    alert('Register Berhasil! Silahkan lakukan Login.')
     return response.json()
   })
   .catch((error) => {
     console.log(error)
   })
 }
-
 // show popup and redirect to login page
 document.getElementById("submitButton").addEventListener("click", signup);
