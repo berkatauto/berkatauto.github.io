@@ -17,6 +17,8 @@ function signup() {
       "Content-Type": "application/json"
     }
   }).then((response) => {
+    console.log(response)
+    alert('Register Berhasil! Silahkan lakukan Login.')
     return response.json()
   })
   .catch((error) => {
