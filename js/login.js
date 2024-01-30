@@ -17,12 +17,12 @@ function signin () {
     }).then((response) => {
         return response.json()
     })
-    // return the token to the header and store it into cookie
     .then((data) => {
-        document.cookie = "token=" + data.token
-        window.location.href = "index.html"
-    })
-    .catch((error) => {
-        console.log(error)
+        if (data.message == "Login Success") {
+            window.location.href = "./dsb/dashboard.html"
+        } else {
+            alert("Username atau Password salah")
+        }
     })
 }
+document.getElementById("loginButton").addEventListener("click", signin)

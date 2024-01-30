@@ -23,4 +23,6 @@ function signup() {
     console.log(error)
   })
 }
-document.getElementById("submitButton").addEventListener("click", signup)
+
+// show popup and redirect to login page
+document.getElementById("submitButton").addEventListener("click", signup);

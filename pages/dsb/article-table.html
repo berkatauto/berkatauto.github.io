@@ -95,7 +95,6 @@
         <div class="w-full h-screen overflow-x-hidden border-t flex flex-col">
             <main class="w-full flex-grow p-6">
                 <h1 class="text-3xl text-black pb-6">Artikel Anda</h1>
-
                 <div class="w-full mt-6">
                     <div class="bg-white overflow-auto">
                         <table class="min-w-full bg-white">
@@ -104,66 +103,18 @@
                                     <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Nama Artikel</th>
                                     <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Nama Penulis</th>
                                     <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Kategori</th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Tags</th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Tanggal</td>
                                     <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Actions</th>
                                 </tr>
                             </thead>
-                            <div id="articlelist">
-                            </div>
-                            <tbody class="text-gray-700">
-                                <tr>
-                                    <td class="w-1/3 text-left py-3 px-4"><a class="hover:text-blue-500" href="../blog-tips.html">Merawat Wrap Mobil Agar Tidak Mudah Tergores</a></td>
-                                    <td class="w-1/3 text-left py-3 px-4"></td>
-                                    <td class="w-1/3 text-left py-3 px-4">Tips</td>
-                                    <td class="text-left py-3 px-4">Mobil, Stiker, Wrap . . .</td>
-                                    <td class="text-left py-3 px-4">12 Oktober 2022</td>
-                                    <td class="text-left py-3 px-4">
-                                        <a href="./edit-article.html" class="text-blue-500 hover:underline mr-2">Edit</a>
-                                        <button onclick="deleteArticle(1)" class="text-red-500 hover:underline">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="w-1/3 text-left py-3 px-4"><a class="hover:text-blue-500" href="#">Mengenal Lebih Dekat Dengan Mesin V8</a></td>
-                                    <td class="w-1/3 text-left py-3 px-4"></td>
-                                    <td class="w-1/3 text-left py-3 px-4">Belajar Otomotif</td>
-                                    <td class="text-left py-3 px-4">Belajar, Sepeda Motor, Rem, Perbaikan</td>
-                                    <td class="text-left py-3 px-4">10 Oktober 2023</td>
-                                    <td class="text-left py-3 px-4">
-                                        <a href="./editarticle.html" class="text-blue-500 hover:underline mr-2">Edit</a>
-                                        <button onclick="deleteArticle(1)" class="text-red-500 hover:underline">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="w-1/3 text-left py-3 px-4"><a class="hover:text-blue-500" href="#">Cara Agar Mur Roda Mobil Mudah Dibuka</a></td>
-                                    <td class="w-1/3 text-left py-3 px-4"></td>
-                                    <td class="w-1/3 text-left py-3 px-4">Tips Otomotif</td>
-                                    <td class="text-left py-3 px-4">Tips, Mobil, Mur, Roda Mobil</td>
-                                    <td class="text-left py-3 px-4">17 Oktober 2023</td>
-                                    <td class="text-left py-3 px-4">
-                                        <a href="./editarticle.html" class="text-blue-500 hover:underline mr-2">Edit</a>
-                                        <button onclick="deleteArticle(1)" class="text-red-500 hover:underline">Delete</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="w-1/3 text-left py-3 px-4"><a class="hover:text-blue-500" href="#">Perusahaan Mobil di Tiongkok Merilis Mobil Listrik Baru</a></td>
-                                    <td class="w-1/3 text-left py-3 px-4"></td>
-                                    <td class="w-1/3 text-left py-3 px-4">Berita</td>
-                                    <td class="text-left py-3 px-4">berita, Teknologi, Mobil . . . </td>
-                                    <td class="text-left py-3 px-4">25 April 2023</td>
-                                    <td class="text-left py-3 px-4">
-                                        <a href="./editarticle.html" class="text-blue-500 hover:underline mr-2">Edit</a>
-                                        <button onclick="deleteArticle(1)" class="text-red-500 hover:underline">Delete</button>
-                                    </td>
-                                </tr>
-                                
+                            <!-- 
+                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Tanggal</td>-->
+                            <tbody id="articlelist" method="GET" class="text-gray-700">
                             </tbody>
                         </table>
                     </div>
             </main>
-    
             <footer class="w-full bg-white text-right p-4">
-                2023 - Berkat Auto
+                2024 - Berkat Auto
             </footer>
         </div>
         
